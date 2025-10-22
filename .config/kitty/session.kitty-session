@@ -1,0 +1,14 @@
+new_tab development-1
+cd ~/projects/personal/
+
+launch
+
+new_tab development-2
+cd ~/projects/personal/
+
+launch
+
+new_tab configurations
+cd ~/.config/
+
+
