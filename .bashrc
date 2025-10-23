@@ -1,7 +1,7 @@
 # .bashrc
 
 # Source global definitions
-alias config='git --git-dir=$HOME/.config/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
