@@ -223,7 +223,7 @@ return {
 			-- cpp
 			clangd = {},
 			cmake = {},
-			-- dev
+			-- web
 			html = {},
 			htmx = {},
 			cssls = {},

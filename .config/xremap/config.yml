@@ -1,0 +1,17 @@
+modmap:
+  - name: "Mistel Co.,Ltd. MD600 Alpha"
+    remap:
+      alt_r: ctrl_l
+      ctrl_l: esc
+      shift_r: enter
+      enter: backspace
+      ctrl_r: grave
+
+keymap:
+  - name: "Mistel Co.,Ltd. MD600 Alpha"
+    remap:
+      alt-h: left
+      alt-j: down
+      alt-k: up
+      alt-l: right
+

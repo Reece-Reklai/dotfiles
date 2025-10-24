@@ -1,0 +1,13 @@
+[Unit]
+Description=Key remapping daemon (xremap for Hyprland)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sh -c 'while [ ! -S "$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" ]; do sleep 0.5; done'
+ExecStart=/usr/bin/xremap --device "Mistel Co.,Ltd. MD600 Alpha Keyboard" /home/reklai/.config/xremap/config.yml
+Restart=no
+
+[Install]
+WantedBy=default.target
+
