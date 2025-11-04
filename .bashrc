@@ -25,3 +25,7 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/bootdev/go.mod
