@@ -21,7 +21,9 @@ return { -- Highlight, edit, and navigate code
             "html",
             "css",
             "javascript",
-            "typescript", },
+            "typescript",
+            "zig",
+        },
         -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = {

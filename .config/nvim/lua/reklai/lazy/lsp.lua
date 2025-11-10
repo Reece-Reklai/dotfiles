@@ -58,6 +58,7 @@ return {
                 "rust_analyzer",
                 "gopls",
                 "tailwindcss",
+                "stylua",
             },
 
             handlers = {
@@ -87,8 +88,8 @@ return {
                     })
 
                     -- Disable Zig autoformatter to use conform.nvim or manual formatting
-                    vim.g.zig_fmt_parse_errors = 0
-                    vim.g.zig_fmt_autosave = 0
+                    -- vim.g.zig_fmt_parse_errors = 0
+                    -- vim.g.zig_fmt_autosave = 0
                 end,
 
                 -----------------------------------------------------------------
