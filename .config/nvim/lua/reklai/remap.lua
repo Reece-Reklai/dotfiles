@@ -18,12 +18,21 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 -- init.lua. If you want these files, they are in the repository, so you can just download them and
 -- place them in the correct locations.
 
+-- Remap Ctrl-^ means original edited file to Ctrl-q
+vim.keymap.set("n", "<C-q>", "<C-^>")
+-- Jump prev / next on the quickfix list without leaving current window
+vim.keymap.set("n", "<C-[>", "<Cmd>try | cprevious | catch | clast | catch | endtry<CR>")
+vim.keymap.set("n", "<C-]>", "<Cmd>try | cnext | catch | cfirst | catch | endtry<CR>")
+-- Take highlight text and move it up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+-- Jump prev / next on quickfix list
+-- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+-- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+-- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
 vim.keymap.set(
 	"n",
 	"<leader>z",
@@ -31,16 +40,24 @@ vim.keymap.set(
 	{ desc = "Replace all of current word" }
 )
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Chmod file -> Make an exeutable.sh" })
+-- Take line below and put it in front of the current line
 vim.keymap.set("n", "J", "mzJ`z")
+-- Keep cursor on same spot while going up/down pages
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- Q is no inop
 vim.keymap.set("n", "Q", "<nop>")
--- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- IDK?
 vim.opt.clipboard = "unnamedplus"
+-- Clipboard / Buffer manipulation
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_dP]])
 vim.keymap.set("x", "<leader>p", [["_dP]])
+-- Copy to clipboard not buffer register
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+-- Clipboard / Buffer manipulation
+
+-- Tab similar to vs code
 vim.keymap.set("v", "<Tab>", ">gv")
 vim.keymap.set("v", "<S-Tab>", "<gv")
 -- vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
