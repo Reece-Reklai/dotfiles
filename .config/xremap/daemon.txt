@@ -1,14 +1,15 @@
 # Reload Daemon xremap
 
 systemctl --user daemon-reload
-systemctl --user restart xremap
+systemctl --user restart xremap.service
 
 # Status
-systemctl --user status xremap
+systemctl --user status xremap xremap.service
 
 # Start
-systemctl --user start xremap
+systemctl --user start xremap  xremap.service
 
 # Stop
-systemctl --user stop xremap
+systemctl --user stop xremap  xremap.service
+
 
